@@ -14,31 +14,31 @@
 
  */
 
-int InputNum(string message)
+int InputNum(string message) // ввод числа
 {
     Console.Write(message);
     return int.Parse(Console.ReadLine()!);
 }
 
-string InputString(string message)
+string InputString(string message) // ввод строки
 {
     Console.Write(message);
     return Console.ReadLine()!;
 }
 
-string[] CreateArray(int size)
+string[] CreateArray(int size) // создание массива строк
 {
     return new string[size];
 }
 
-void FillArray(string[] arr)
+void FillArray(string[] arr) // ввод элементов массива пользователем
 {
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = InputString($"Введи элемент {i + 1}: ");
     }
 }
-void PrintArray(string[] arr)
+void PrintArray(string[] arr) // вывод элементов массива
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -47,7 +47,7 @@ void PrintArray(string[] arr)
     Console.WriteLine();
 }
 
-string[] CreateNewArray(string[] arr)
+string[] CreateNewArray(string[] arr) // создание нового массива строк, длина которых <= 3 символам.
 {
     int lengthNewArr = 0;
     for (int i = 0; i < arr.Length; i++)
